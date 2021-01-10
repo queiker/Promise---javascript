@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+let prom1 = new Promise((resolve, reject) => {
+	setTimeout(function(){
+    resolve("Success!"); // Yay! Everything went well!
+  }, 2000);
+});
+
+prom1.then(displaySuccess);
+
+
+prom1.then((successMsg) => {
+	
+	console.log("AAAA " + successMsg);
+	alert("AAAA " + successMsg);
+});
+
+
+function displaySuccess(successMsg){
+console.log(successMsg);
+	alert(successMsg);
+}
+</script>
+</head>
+<body>
+</body>
+</html>
